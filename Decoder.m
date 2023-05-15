@@ -7,8 +7,8 @@
 
 %% Multiclass SVM and 10-fold cross-validation for decoding behavioral cluster
 
-Decode_WT.Multi.MCReps = 15; % Number of Monte-carlo shufflings
-Decode_WT.Multi.nPerms = 15; % Number of permutation for statistical significance
+Decode_WT.Multi.MCReps = 1000; % Number of Monte-carlo shufflings
+Decode_WT.Multi.nPerms = 1000; % Number of permutation for statistical significance
 
 Decode_WT.Multi.Real = struct();
 Decode_WT.Multi.Perm = struct();
