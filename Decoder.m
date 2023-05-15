@@ -2,8 +2,8 @@
 % 
 % Data sources
 %   - Event.nEvents.ByChunk    : calcium event data of every 2s for each neuron
-%   - Video.Cluster            : behavior cluster obtained with behavior classification (tSNE.m)
-%   - Freezing.Obs.ByEpoch     : Freezing rate of observers every 2s
+%   - Video.Cluster            : 10s behavior cluster obtained with behavior classification (tSNE.m)
+%   - Freezing.Obs.ByEpoch     : Freezing rate of observers every 10s
 
 %% Multiclass SVM and 10-fold cross-validation for decoding behavioral cluster
 
@@ -98,7 +98,7 @@ clear N C opts cvp ii
 
 %% Functions
 
-function [Mdl, label,confmat,accuracy] = SVM(func,N,C,cvp,opts,nReps,method)
+function [label,confmat,accuracy] = SVM(func,N,C,cvp,opts,nReps,method)
 
 nClasses = numel(opts.ClassNames);
 
